@@ -88,7 +88,10 @@ $xxl: 100px;
 /*-----------------
 2.1 - Headings
 -------------------*/
-
+.page-title {
+	line-height: 122px;
+  font-size: 48px;
+}
 
 /*-----------------
 2.2 - Body Copy
@@ -102,7 +105,25 @@ $xxl: 100px;
 /*-----------------
 3.1 - Main Nav
 -------------------*/
+nav.top-nav {
+	height: 100%;
+}
 
+#nav-mobile {
+	padding: 32px 32px 0 32px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	.nav-items {
+		width: 100%;
+	}
+}
+
+.side-nav a {
+	@media screen and (max-width: 992px) {
+	  padding: 0;
+	}
+}
 
 /*-----------------
 3.2 - Buttons
@@ -143,6 +164,11 @@ section {
 /*--------------------------------------------------------------
 5.0 - Media
 -------------------------------------------------------------- */
+
+a.brand-logo img{
+	width: 100px;
+}
+
 
 /*---------------------------
 5.1 - WordPress Defaults
