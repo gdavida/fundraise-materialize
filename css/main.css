@@ -6887,8 +6887,18 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 2.1 - Headings
 -------------------*/
 .page-title {
-  line-height: 122px;
-  font-size: 48px; }
+  line-height: normal;
+  font-size: 48px;
+  margin: 0; }
+
+.page-subtitle {
+  font-size: 30px;
+  margin-top: 0;
+  line-height: 32px; }
+
+p.org-title {
+  font-size: 20px;
+  margin-bottom: 0; }
 
 /*-----------------
 2.2 - Body Copy
@@ -6902,17 +6912,45 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 nav.top-nav {
   height: 100%; }
 
+nav .nav-wrapper {
+  position: relative;
+  height: 100%;
+  line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.main-nav a i {
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+
 #nav-mobile {
   padding: 32px 32px 0 32px;
   display: flex;
   align-items: center;
   flex-direction: column; }
   #nav-mobile .nav-items {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    #nav-mobile .nav-items a {
+      height: 40px;
+      justify-content: flex-start;
+      display: flex;
+      padding-left: 0;
+      color: black; }
+    #nav-mobile .nav-items p a {
+      color: black; }
 
 @media screen and (max-width: 992px) {
   .side-nav a {
     padding: 0; } }
+
+.fixed-announcement {
+  padding: 10px 0; }
+  .fixed-announcement i {
+    position: relative;
+    top: 5px; }
 
 /*-----------------
 3.2 - Buttons
@@ -6933,11 +6971,41 @@ nav.top-nav {
 /*---------------------------
 4.3 - Site Footer
 --------------------------- */
+/* makes footer sticky */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+
 /*---------------------------
 4.4 - Content Sections
 --------------------------- */
 section {
   padding: 60px 0; }
+
+/*---------------------------
+4.4 - /About Us
+--------------------------- */
+.container.how-to-give .row {
+  height: 150px; }
+
+/*---------------------------
+4.5 - /Store
+--------------------------- */
+.apparel-images-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .apparel-images-wrapper .card {
+    width: 27%;
+    margin-right: 3%;
+    margin-top: 20px;
+    margin-bottom: 10px; }
+    .apparel-images-wrapper .card img {
+      width: 100%; }
 
 /*--------------------------------------------------------------
 5.0 - Media
